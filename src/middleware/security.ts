@@ -1,7 +1,7 @@
 import type { Request, Response, NextFunction } from "express";
 import type { IncomingMessage } from "http";
 import { slidingWindow } from "@arcjet/node";
-import aj from "../config/arcjet";
+import aj from "../config/arcjet.js";
 
 // Pre-auth middleware: run early to block bots/shields and apply guest-level rate limits.
 export const preAuthSecurityMiddleware = async (req: Request, res: Response, next: NextFunction) => {
